@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#211b17" />
+    <meta name="description" content="Akinator Indonesia di sebuah ruang baca misterius." />
+    <title>mrzkyzdnii — Akinator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <div class="grain" aria-hidden="true"></div>
+      <header class="topbar">
+        <button class="brand" id="brand-home" aria-label="Kembali ke awal">
+          <span class="brand-mark">⌑</span><span><strong>mrzkyzdnii</strong><small>AKINATOR / ARSIP PRIBADI</small></span>
+        </button>
+        <div class="topbar-note"><i></i> ruang baca sedang terbuka</div>
+      </header>
+
+      <section class="library-stage">
+        <aside class="side-rail">
+          <div class="rail-art" role="img" aria-label="Rak buku dan lampu meja dalam ruang baca"></div>
+          <div class="rail-copy"><span>06 / 06</span><p>“Yang dicari bukan jawaban cepat, tetapi pola yang pelan-pelan tampak.”</p><small>— penjaga katalog</small></div>
+          <div class="rail-footer"><span>BAHASA</span><b>ID</b><i></i><span>EDISI 01</span></div>
+        </aside>
+
+        <div class="game-panel">
+          <div class="panel-meta"><span class="eyebrow"><i></i><span id="eyebrow">CATATAN PERTAMA</span></span><span>MZK / 2026</span></div>
+          <section id="intro-view" class="intro-view view-enter">
+            <div class="intro-copy"><div class="tiny-label">✧ sebuah permainan membaca kemungkinan</div><h1>Siapa yang<br /><em>ada di pikiranmu?</em></h1><p>Akinator akan menyisir petunjuk satu demi satu. Pilih jawaban yang paling dekat, dan biarkan sosoknya muncul dari balik halaman.</p><button class="primary-action" id="start-button"><span>⌑</span><span>Mulai membaca</span><span>↗</span></button><div class="intro-footnote"><span>5 pilihan per pertanyaan</span><b></b><span>bisa kembali kapan saja</span></div></div>
+            <div class="intro-visual"><img src="/assets/divination-card.jpg" alt="Kartu ramalan bergaya arsip perpustakaan" /><div class="stamp">BACA<br /><b>PELAN</b></div><div><span>CATATAN 001</span><span>jangan buru-buru</span></div></div>
+          </section>
+
+          <section id="play-view" class="play-view is-hidden" aria-live="polite">
+            <div class="question-heading"><span id="question-index">01</span><div><small>Pertanyaan dari rak tengah</small><h1 id="question-text"></h1></div></div>
+            <div class="progress-row"><div><span id="progress-bar"></span></div><b id="progress-label">0% terbaca</b></div>
+            <div class="answer-list" id="answer-list"></div>
+            <div class="play-tools"><button id="back-button">← kembali</button><button id="stop-button" class="stop">□ tutup arsip</button><span>tekan 1—5 untuk memilih</span></div>
+          </section>
+
+          <section id="result-view" class="result-view is-hidden">
+            <div><small>Setelah menimbang semua petunjuk</small><h1>Rak ini menemukan<br /><em id="result-name"></em></h1><p id="result-description"></p><hr /><div class="result-actions"><button class="primary-action" id="again-button">↻ Coba sosok lain <span>↗</span></button><button id="result-home">← kembali ke awal</button></div></div>
+            <div class="result-portrait"><img id="result-photo" alt="" /><div id="portrait-placeholder">⌑</div><small>✓ tebakan tercatat</small></div>
+          </section>
+          <div id="message" class="message is-hidden" role="status"></div>
+          <footer><span>mrzkyzdnii-akinator</span><i></i><span>dibuat untuk yang penasaran</span></footer>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

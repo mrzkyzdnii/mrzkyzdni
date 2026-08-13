@@ -1,0 +1,13 @@
+{
+  "name": "mrzkyzdnii-akinator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Akinator Indonesia dengan desain Ruang Baca Aneh.",
+  "engines": { "node": "20.x" },
+  "scripts": {
+    "check": "node --check api/akinator.js && node --check public/app.js"
+  },
+  "dependencies": {
+    "@aqul/akinator-api": "^3.0.1"
+  }
+}
